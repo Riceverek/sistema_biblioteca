@@ -1,164 +1,100 @@
-PLANES DE PRUEBA – SISTEMA DE BIBLIOTECA DIGITAL
+Plan de Pruebas: Sistema de Biblioteca Digital
 
-1. Plan de prueba: Registro y autenticación (RF-01)
+Prueba 01 (PP-01): Crear cuenta e iniciar sesión
+Objetivo: Asegurarnos de que cualquier persona pueda registrarse sin problemas y entrar a su cuenta usando su correo y contraseña.
 
-Código: PP-01
-Nombre: Verificación del registro e inicio de sesión de usuarios.
-Objetivo: Comprobar que el sistema permita registrar nuevos usuarios e iniciar sesión mediante correo electrónico y contraseña.
+Lo que necesitamos antes de empezar: El usuario debe tener un correo electrónico válido, acceso a internet, y la plataforma debe estar en funcionamiento.
 
-Precondiciones:
+Pasos a seguir:
 
-- El usuario debe tener acceso al sistema.
-- El usuario debe contar con un correo electrónico válido.
-- El sistema debe estar funcionando correctamente.
+Entrar a la página de registro.
 
-Procedimiento de prueba:
+Llenar los datos personales (nombre, correo, contraseña) y darle al botón de registrar.
 
-1. Ingresar a la página de registro.
-2. Completar los campos solicitados con nombre, correo electrónico y contraseña.
-3. Presionar el botón de registrar.
-4. Verificar que el usuario quede registrado.
-5. Ingresar al inicio de sesión.
-6. Escribir el correo y la contraseña registrados.
-7. Presionar el botón de iniciar sesión.
+Confirmar que la cuenta se creó.
 
-Resultado esperado:
+Ir a la pantalla de inicio de sesión.
 
-- El sistema debe registrar correctamente al nuevo usuario.
-- Debe permitir el acceso cuando las credenciales sean correctas.
-- Debe mostrar un mensaje de error cuando el correo o la contraseña sean incorrectos.
-- No debe permitir el registro de un correo que ya se encuentre registrado.
+Escribir el correo y la contraseña que acabamos de registrar y entrar.
 
----
+Qué debería pasar: El sistema debe dar la bienvenida al nuevo usuario y dejarlo entrar a su cuenta. Si se equivoca en la contraseña o el correo, debe avisarle con un mensaje claro. Además, no debe dejar registrar un correo que ya se esté usando en otra cuenta.
+_____________________________________________________________________________________
+Prueba 02 (PP-02): Probar el buscador de libros
 
-2. Plan de prueba: Búsqueda de material (RF-02)
+Objetivo: Confirmar que los lectores puedan encontrar rápido lo que buscan usando los diferentes filtros de la página.
 
-Código: PP-02
-Nombre: Verificación del buscador de libros y documentos.
-Objetivo: Comprobar que los usuarios puedan encontrar materiales digitales utilizando diferentes filtros de búsqueda.
+Lo que necesitamos antes de empezar: Ya deben existir libros guardados en la biblioteca y el usuario debe estar navegando en la plataforma.
 
-Precondiciones:
+Pasos a seguir:
 
-- El sistema debe tener libros y documentos registrados en el catálogo.
-- El usuario debe ingresar a la biblioteca digital.
+Ir a la barra del buscador.
 
-Procedimiento de prueba:
+Intentar encontrar un libro escribiendo su título exacto.
 
-1. Ingresar al buscador de la biblioteca.
-2. Buscar un libro utilizando su título.
-3. Realizar una búsqueda utilizando el nombre del autor.
-4. Buscar un material por género.
-5. Realizar una búsqueda mediante palabras clave.
-6. Verificar los resultados obtenidos en cada búsqueda.
+Buscar todos los libros de un autor en particular.
 
-Resultado esperado:
+Filtrar los libros por un género (ej. Ciencia Ficción).
 
-- El sistema debe mostrar los libros relacionados con los criterios de búsqueda.
-- Los filtros deben funcionar correctamente.
-- Los resultados deben corresponder a la información ingresada.
-- Si no existen coincidencias, el sistema debe mostrar un mensaje indicando que no se encontraron resultados.
+Escribir palabras clave sueltas para ver qué aparece.
 
----
+Revisar si los resultados tienen sentido en cada intento.
 
-3. Plan de prueba: Lectura y préstamo digital (RF-03)
+Qué debería pasar: El buscador debe mostrar los libros correctos según lo que se escribió en los filtros. Si alguien busca un libro que no tenemos, la página debe avisar amablemente que no se encontraron resultados en lugar de quedarse en blanco.
+_____________________________________________________________________________________
+Prueba 03 (PP-03): Leer en línea y pedir libros prestados
 
-Código: PP-03
-Nombre: Verificación de lectura y solicitud de préstamos digitales.
-Objetivo: Comprobar que los usuarios registrados puedan solicitar préstamos de libros digitales y acceder a su lectura en línea.
+Objetivo: Verificar que las personas registradas puedan pedir libros digitales prestados y leerlos directamente en su pantalla.
 
-Precondiciones:
+Lo que necesitamos antes de empezar: El usuario debe haber iniciado sesión y deben existir libros digitales listos para préstamo en el catálogo.
 
-- El usuario debe estar registrado e iniciar sesión.
-- Deben existir libros digitales disponibles en el catálogo.
-- Los archivos deben estar cargados correctamente.
+Pasos a seguir:
 
-Procedimiento de prueba:
+Iniciar sesión y elegir un libro que esté disponible.
 
-1. Iniciar sesión en la biblioteca digital.
-2. Buscar un libro disponible.
-3. Seleccionar el libro deseado.
-4. Presionar la opción de solicitar préstamo.
-5. Verificar la confirmación de la solicitud.
-6. Seleccionar un libro que permita lectura en línea.
-7. Abrir el documento y comprobar que se pueda visualizar su contenido.
+Darle al botón para solicitar el préstamo.
 
-Resultado esperado:
+Confirmar que el sistema avise que el préstamo fue exitoso.
 
-- El sistema debe permitir solicitar el préstamo de libros digitales.
-- Debe mostrar una confirmación de la solicitud.
-- El usuario debe poder abrir y leer los documentos en línea.
-- Los libros deben visualizarse correctamente y sin errores de carga.
+Elegir un libro para leer ahí mismo en la página y abrirlo.
 
----
+Qué debería pasar: El sistema debe procesar el préstamo y mostrar una confirmación. Al abrir un documento para leer, las páginas deben cargar bien, sin errores, para que el usuario pueda disfrutar la lectura de inmediato.
+_____________________________________________________________________________________
+Prueba 04 (PP-04): Administrar la biblioteca (Subir y borrar libros)
 
-4. Plan de prueba: Gestión del catálogo (RF-04)
+Objetivo: Comprobar que el equipo encargado pueda mantener la biblioteca al día subiendo libros nuevos, editando información o borrando lo que ya no sirva.
 
-Código: PP-04
-Nombre: Verificación de la administración del catálogo digital.
-Objetivo: Comprobar que los administradores puedan agregar, modificar y eliminar libros o documentos de la biblioteca.
+Lo que necesitamos antes de empezar: Hay que entrar con una cuenta de administrador que tenga permisos especiales. También necesitamos tener a la mano archivos de prueba en formato PDF o ePub.
 
-Precondiciones:
+Pasos a seguir:
 
-- El administrador debe contar con usuario y contraseña.
-- Debe tener permisos para gestionar el catálogo.
-- El sistema debe permitir cargar archivos PDF y ePub.
+Entrar como administrador e ir a la sección de gestión del catálogo.
 
-Procedimiento de prueba:
+Darle a "agregar libro", llenar los datos (título, autor, género, resumen) y subir el archivo PDF o ePub.
 
-1. Iniciar sesión con una cuenta de administrador.
-2. Ingresar al módulo de gestión del catálogo.
-3. Seleccionar la opción agregar libro.
-4. Ingresar título, autor, género y descripción.
-5. Cargar un archivo en formato PDF o ePub.
-6. Guardar la información y verificar que aparezca en el catálogo.
-7. Seleccionar un libro existente y modificar sus datos.
-8. Guardar los cambios y comprobar la actualización.
-9. Seleccionar un libro y ejecutar la opción eliminar.
+Guardar y buscar el libro en la biblioteca para ver si aparece.
 
-Resultado esperado:
+Elegir un libro que ya exista, cambiarle algún dato y guardar los cambios.
 
-- El administrador debe poder agregar nuevos libros.
-- El sistema debe aceptar archivos PDF y ePub válidos.
-- Debe permitir modificar la información de los libros.
-- Debe eliminar los materiales seleccionados del catálogo.
-- Los cambios deben reflejarse correctamente en la biblioteca.
+Seleccionar un libro de prueba y borrarlo.
 
----
+Qué debería pasar: La plataforma debe dejar subir los libros (siempre que sean PDF o ePub), actualizar la información cuando se edita algo y quitar por completo los libros que se decida borrar. Todos estos cambios se deben reflejar al instante para los lectores.
+_____________________________________________________________________________________
+Prueba 05 (PP-05): Revisar el historial personal (Mis lecturas)
 
-5. Plan de prueba: Historial de usuario (RF-05)
+Objetivo: Confirmar que la plataforma recuerde y le muestre a cada persona los libros que ya leyó y los que tiene prestados actualmente.
 
-Código: PP-05
-Nombre: Verificación del historial de lectura y préstamos.
-Objetivo: Comprobar que el sistema almacene y muestre correctamente el historial de libros leídos y los préstamos activos de cada usuario.
+Lo que necesitamos antes de empezar: Entrar con una cuenta de usuario que ya haya interactuado con la biblioteca (leyendo o pidiendo prestado algo).
 
-Precondiciones:
+Pasos a seguir:
 
-- El usuario debe estar registrado.
-- Debe haber iniciado sesión.
-- Debe haber realizado al menos una lectura o solicitado un préstamo.
+Iniciar sesión, pedir un libro prestado y abrir otro para leer en línea.
 
-Procedimiento de prueba:
+Ir a la sección personal de "Mi historial".
 
-1. Iniciar sesión con una cuenta de usuario.
-2. Solicitar el préstamo de un libro digital.
-3. Abrir un libro para leerlo en línea.
-4. Ingresar a la sección de historial de usuario.
-5. Verificar que aparezcan los libros leídos.
-6. Comprobar que se muestren los préstamos activos.
-7. Cerrar sesión e ingresar nuevamente.
-8. Consultar el historial para verificar que la información permanezca guardada.
+Revisar que ahí aparezcan los libros que acabamos de leer y los préstamos activos.
 
-Resultado esperado:
+Cerrar la sesión, volver a entrar y revisar el historial de nuevo.
 
-- El sistema debe guardar los libros que el usuario ha leído.
-- Debe mostrar los préstamos que se encuentran activos.
-- El historial debe corresponder únicamente al usuario que inició sesión.
-- La información debe mantenerse guardada aunque el usuario cierre sesión y vuelva a ingresar.
-
----
-
-CONCLUSIÓN
-
-Los cinco planes de prueba permiten verificar el funcionamiento de los principales módulos de la biblioteca digital. Mediante estas pruebas se busca garantizar que los usuarios puedan registrarse, iniciar sesión, buscar libros, solicitar préstamos, leer documentos en línea y consultar su historial.
+Qué debería pasar: La página debe mostrar una lista exacta con los préstamos y lecturas de esa persona (y de nadie más). Esta información debe estar segura y no borrarse al cerrar la cuenta; debe seguir ahí intacta al volver a entrar.libros, solicitar préstamos, leer documentos en línea y consultar su historial.
 
 También se verifica que los administradores puedan gestionar correctamente el catálogo. La ejecución de estos planes permitirá identificar errores, corregir posibles fallas y garantizar que el sistema cumpla con los requisitos funcionales establecidos.
