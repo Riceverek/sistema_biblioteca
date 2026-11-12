@@ -22,3 +22,9 @@ El sistema busca reducir los procesos manuales, mejorar la organización de la i
 ## 🚀 Estado del proyecto
 
 En desarrollo.
+
+## 📌 Próximas mejoras
+
+- Implementar autenticación de usuarios.
+- Incorporar un módulo de multas por retrasos.
+- Desarrollar reportes estadísticos de préstamos.
